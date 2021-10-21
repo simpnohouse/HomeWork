@@ -29,10 +29,9 @@ class MyThread extends Thread {
 public class ThreadTest {
     public static void main(String[] args) {
         MyThread t1 = new MyThread();
-        MyThread t2 = new MyThread();
+
         //start()两个作用：1.启动当前线程 2.启动run()方法。
         t1.start();
-        t2.start();
         for (int i = 0; i < 100; i++) {
             if (i % 2 == 0) {
                 System.out.println(i + Thread.currentThread().getName());
