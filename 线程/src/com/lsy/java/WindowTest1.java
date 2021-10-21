@@ -7,19 +7,20 @@ package com.lsy.java;
  * @Data 2021/10/2114:11
  * @Vervion 解决线程安全问题
  * 1.同步代码块
- * 2.同步方法
+ * 2.使用同步代码块解决线程安全问题
  */
-class Window1 implements Runnable {
+class   Window1 implements Runnable {
     int ticket = 100;
     //同步代码块的🔒(要求多个线程必须共用同一把锁)
     Object object = new Object();
 
     @Override
     public void run() {
-        //同步代码块
-        synchronized (object) {
-            while (true) {
 
+
+        while (true) {
+            //同步代码块
+            synchronized (this) {
                 if (ticket < 1) {
                     break;
                 }
@@ -34,6 +35,7 @@ class Window1 implements Runnable {
 
             }
         }
+
 
     }
 

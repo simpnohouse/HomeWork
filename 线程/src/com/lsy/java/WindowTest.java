@@ -10,15 +10,17 @@ import java.security.PublicKey;
  * @Vervion
  */
 class WindowThread extends Thread{
-    private static int ticket=100;//票是三个线程共用资源，要静态定义。（还是会有线程不安全的问题）
-
+    private static int ticket=100;//票是三个线程共用资源，要静态定义。（还是会有线程不安全的问题
     @Override
     public void run() {
+
         while (true){
-            System.out.println(getName()+" 票号为:"+ticket);
-            ticket--;
-            if(ticket<1){
-                break;
+            synchronized (WindowThread.class){//锁不一定是对象，也可以是类。 或者可以这样说，类也是对象。
+                if(ticket<1){
+                    break;
+                }
+                System.out.println(getName()+" 票号为:"+ticket);
+                ticket--;
             }
         }
     }
