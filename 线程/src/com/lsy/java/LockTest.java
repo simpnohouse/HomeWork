@@ -20,7 +20,7 @@ import java.util.concurrent.locks.ReentrantLock;
  * @Data 2021/10/2713:18
  * @Vervion
  */
-class window implements  Runnable{
+class Window implements  Runnable{
     private int ticket=100;
     private ReentrantLock lock=new ReentrantLock();
 
@@ -47,11 +47,10 @@ class window implements  Runnable{
 
 public class LockTest {
     public static void main(String[] args) {
-        window window = new window();
+        Window window = new Window();
         Thread thread1 = new Thread(window);
         Thread thread2 = new Thread(window);
         thread1.start();
         thread2.start();
-
     }
 }
