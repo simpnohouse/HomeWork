@@ -3,7 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/HomeWork.iml" filepath="$PROJECT_DIR$/HomeWork.iml" />
+      <module fileurl="file://$PROJECT_DIR$/String/String.iml" filepath="$PROJECT_DIR$/String/String.iml" />
       <module fileurl="file://$PROJECT_DIR$/线程/线程.iml" filepath="$PROJECT_DIR$/线程/线程.iml" />
+      <module fileurl="file://$PROJECT_DIR$/集合/集合.iml" filepath="$PROJECT_DIR$/集合/集合.iml" />
     </modules>
   </component>
 </project>
